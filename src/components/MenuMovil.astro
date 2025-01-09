@@ -1,0 +1,70 @@
+<div class="px-4">
+  <div class="section-menu xl:hidden poppins-regular">
+    <div class="section-menu-wrapper">
+      <button class="section-menu-toggle">Seleccionar sección</button>
+    </div>
+    <div class="section-menu-overlay">
+      <a href="#general" class="section-menu-toggle">Información general</a>
+      <a href="#equipamiento" class="section-menu-toggle"
+        >Equipamiento y Tecnología</a
+      >
+      <a href="#especificaciones" class="section-menu-toggle"
+        >Especificaciones Técnicas</a
+      >
+      <a href="#seguridad" class="section-menu-toggle">Seguridad</a>
+      <a href="#precios" class="section-menu-toggle">Precios y Financiamiento</a
+      >
+    </div>
+  </div>
+</div>
+
+<style>
+  .section-menu {
+    position: relative;
+    margin: 20px auto;
+  }
+  .section-menu .section-menu-wrapper {
+    position: relative;
+  }
+  .section-menu .section-menu-toggle {
+    border: 2px solid #b81e24;
+    color: #b81e24;
+    text-align: left;
+    background: #fff;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  .section-menu .section-menu-wrapper:after {
+    font-family: Material Icons;
+    content: "arrow_drop_down";
+    color: #b81e24;
+    font-size: 30px;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 58%;
+    transform: translateY(-58%);
+  }
+  .section-menu .section-menu-overlay {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    flex-direction: column;
+  }
+</style>
+
+<script is:inline>
+  // mostrar/ocultar overlay
+  const sectionMenu = document.querySelector(".section-menu");
+  const sectionMenuToggle = document.querySelector(".section-menu-toggle");
+  const sectionMenuOverlay = document.querySelector(".section-menu-overlay");
+
+  sectionMenuToggle.addEventListener("click", () => {
+    sectionMenuOverlay.style.display =
+      sectionMenuOverlay.style.display === "flex" ? "none" : "flex";
+  });
+</script>

@@ -1,0 +1,194 @@
+<div class="overlay overlay--models">
+  <div class="overlay-models">
+    <div class="overlay-models__image col-25">
+      <a href="https://gacmotor.cl/modelos/gs3-power/"
+        ><img
+          src="https://gacmotor.cl/content/uploads/gs3-3.png"
+          alt="GS3 Power"
+          class="img-fluid"
+        /></a
+      >
+    </div>
+    <div class="overlay-models__image col-25">
+      <a href="https://gacmotor.cl/modelos/gs4-power/"
+        ><img
+          src="https://gacmotor.cl/content/uploads/gs4-2.png"
+          alt="GS4 POWER"
+          class="img-fluid"
+        /></a
+      >
+    </div>
+    <div class="overlay-models__image col-25">
+      <a href="https://gacmotor.cl/modelos/gs8/"
+        ><img
+          src="https://gacmotor.cl/content/uploads/gs8.png"
+          alt="GS8"
+          class="img-fluid"
+        /></a
+      >
+    </div>
+    <div class="overlay-models__image col-25">
+      <a href="https://gacmotor.cl/modelos/emkoo/"
+        ><img
+          src="https://gacmotor.cl/content/uploads/emkoo.png"
+          alt="EMKOO"
+          class="img-fluid"
+        /></a
+      >
+    </div>
+    <div class="overlay-models__image col-25">
+      <a href="https://gacmotor.cl/modelos/emzoom/"
+        ><img
+          src="https://gacmotor.cl/content/uploads/emzoom.png"
+          alt="EMZOOM"
+          class="img-fluid"
+        /></a
+      >
+    </div>
+    <div class="overlay-models__image col-25">
+      <a href="https://gacmotor.cl/aion-y/"
+        ><img
+          src="https://gacmotor.cl/content/uploads/aion-y.png"
+          alt="Aion Y"
+          class="img-fluid"
+        /></a
+      >
+    </div>
+    <div class="overlay-models__image col-25">
+      <a href="https://gacmotor.cl/empow/"
+        ><img
+          src="https://gacmotor.cl/content/uploads/empow.png"
+          alt="EMPOW"
+          class="img-fluid"
+        /></a
+      >
+    </div>
+    <div class="overlay-models__image col-25">
+      <a href="https://gacmotor.cl/aion-es/"
+        ><img
+          src="https://gacmotor.cl/content/uploads/aion-es.png"
+          alt="Aion ES"
+          class="img-fluid"
+        /></a
+      >
+    </div>
+  </div>
+  <div class="overlay-models__see-more">
+    <a href="https://gacmotor.cl/modelos/" class="button-bg--arrow"
+      ><span class="button-text"
+        >Ver más <i class="material-icons">keyboard_arrow_right</i></span
+      ></a
+    >
+  </div>
+</div>
+
+<style is:global>
+  .overlay--models {
+    flex-direction: column;
+  }
+  .overlay {
+    padding: 20px 40px;
+    display: flex;
+    position: fixed;
+    width: 75%;
+    background: #e0e0e0;
+    top: 7rem;
+    left: 14%;
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease;
+    opacity: 0;
+    -webkit-animation: fadeIn 0.4s ease;
+    animation: fadeIn 0.4s ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    z-index: 10;
+    visibility: hidden;
+  }
+  .overlay .overlay-models__image img {
+    transition: all 0.2s ease;
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .overlay .overlay-models {
+    display: flex;
+  }
+  .overlay .overlay-models__image {
+    text-align: center;
+  }
+  .overlay .overlay-models__see-more {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+  .button-bg--arrow {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #b81e24;
+    display: inline-block;
+    transition: all 0.2s ease;
+  }
+  .overlay .overlay-models__see-more span {
+    display: flex;
+    align-items: center;
+  }
+  .button-bg--arrow span {
+    margin-right: 0.5rem;
+  }
+  .button-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    border-bottom: 0.1rem solid transparent;
+  }
+  .col-25 {
+    flex: 0 0 12.5%;
+    max-width: 20%;
+  }
+  .material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+  }
+</style>
+
+<script is:inline>
+  // mostrar/ocultar overlay
+  const overlay = document.querySelector(".overlay--models");
+  document.querySelector(".modelos").addEventListener("click", () => {
+    if (overlay.style.opacity == 1) {
+      overlay.style.opacity = 0;
+      overlay.style.visibility = "hidden";
+    } else {
+      overlay.style.opacity = 1;
+      overlay.style.visibility = "visible";
+    }
+  });
+
+  // ocultar overlay click afuera
+  document.addEventListener("click", function (event) {
+    if (
+      !event.target.closest(".overlay--models") &&
+      !event.target.closest(".modelos")
+    ) {
+      overlay.style.opacity = 0;
+      overlay.style.visibility = "hidden";
+    }
+  });
+</script>

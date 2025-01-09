@@ -1,0 +1,117 @@
+---
+import GtmBody from "../components/GtmBody.astro";
+import GtmHead from "../components/GtmHead.astro";
+import MenuGac from "../components/MenuGac.astro";
+import MenuGacMovil from "../components/MenuGacMovil.astro";
+import MenuMovil from "../components/MenuMovil.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      id="font-awesome-css"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css?ver=5.8.1"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <GtmHead />
+  </head>
+  <body class="text-sm xl:text-base">
+    <GtmBody />
+    <header
+      class="bg-[url('/emkoo-hibrido/img/fondo-header-m.jpg')] xl:bg-[url('/emkoo-hibrido/img/fondo-header.jpg')] bg-cover aspect-[750/375] xl:aspect-[1440/714] text-white"
+    >
+      <MenuGac />
+      <div
+        class="flex justify-between xl:justify-center pt-2 px-2 xl:pt-4 xl:px-4 poppins-medium"
+      >
+        <a href="https://www.gacmotor.cl"
+          ><img
+            src="/emkoo-hibrido/img/logo-gac.svg"
+            alt="GAC Motor"
+            class="xl:hidden w-36"
+          /></a
+        >
+        <nav class="hidden xl:block">
+          <ul
+            class="flex gap-16 items-center justify-between text-sm text-center uppercase"
+          >
+            <li><a href="#general">Información <br /> general</a></li>
+            <li>
+              <a href="#equipamiento">Equipamiento <br /> y tecnología</a>
+            </li>
+            <li><a href="#seguridad">Seguridad</a></li>
+            <li>
+              <a href="#especificaciones">Especificaciones <br /> técnicas</a>
+            </li>
+            <li><a href="#precios">Precios y<br />financiamiento</a></li>
+          </ul>
+        </nav>
+        <MenuGacMovil />
+      </div>
+    </header>
+    <MenuMovil />
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+</style>
