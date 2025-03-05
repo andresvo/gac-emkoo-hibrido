@@ -1,45 +1,57 @@
 ---
-import Item from "./beneficios/Item.astro"
+import Item from "./beneficios/Item.astro";
 
-const img_1 = "/emkoo-hibrido/img/benef1.png"
-const img_2 = "/emkoo-hibrido/img/benef2.png"
-const img_3 = "/emkoo-hibrido/img/benef3.png"
-const img_4 = "/emkoo-hibrido/img/benef4.png"
+const img_1 = "/emkoo-hibrido/img/benef1.png";
+const img_2 = "/emkoo-hibrido/img/benef2.png";
+const img_3 = "/emkoo-hibrido/img/benef3.png";
+const img_4 = "/emkoo-hibrido/img/benef4.png";
 
-const title_1 = "EFICIENCIA\n" +
-    "INTELIGENTE"
-const title_2 = "MENOS \n" +
-    "EMISIONES"
-const title_3 = "AUTONOMÍA\n" +
-    "SUPERIOR"
-const title_4 = "RECARGA\n" +
-    "AUTOMÁTICA"
+const title_1 = "EFICIENCIA\n" + "INTELIGENTE";
+const title_2 = "MENOS \n" + "EMISIONES";
+const title_3 = "AUTONOMÍA\n" + "SUPERIOR";
+const title_4 = "RECARGA\n" + "AUTOMÁTICA";
 
-const description_1 = "El sistema híbrido autorrecargable de GAC Emkoo HEV optimiza el consumo de combustible, reduciendo hasta 20% el gasto sin comprometer el rendimiento."
-const description_2 = "Gracias a su tecnología avanzada, disminuye en 20% la emisión de CO₂, contribuyendo a un futuro más sustentable sin la necesidad de carga externa."
-const description_3 = "Disfruta de recorridos más eficientes, con más tiempo en modo eléctrico en ciudad y un desempeño optimizado para cualquier tipo de viaje."
-const description_4 = "Olvídate de los enchufes: la batería se recarga de manera continua aprovechando la energía del frenado y el movimiento del vehículo."
+const description_1 =
+  "El sistema híbrido autorrecargable de GAC Emkoo HEV optimiza el consumo de combustible, reduciendo hasta 20% el gasto sin comprometer el rendimiento.";
+const description_2 =
+  "Gracias a su tecnología avanzada, disminuye en casi un 26% la emisión de CO₂, contribuyendo a un futuro más sustentable sin la necesidad de carga externa.";
+const description_3 =
+  "Disfruta de recorridos más eficientes, con más tiempo en modo eléctrico en ciudad y un desempeño optimizado para cualquier tipo de viaje.";
+const description_4 =
+  "Olvídate de los enchufes: la batería se recarga de manera continua aprovechando la energía del frenado y el movimiento del vehículo.";
 ---
-<div class="my-8 xl:my-16">
-    <section class="">
-        <h2 class="col-span-4 poppins-bold uppercase text-3xl xl:text-6xl xl:text-center mb-6">
-            BENEFICIOS DE LA MOTORIZACIÓN
-            HÍBRIDA AUTORRECARGABLE
-        </h2>
 
-        <div class="grid grid-cols-1 xl:grid-cols-4 px-14 gap-4 lg:gap-10 relative flex items-top fondo">
-            <Item title={title_1} img={img_1} description={description_1} />
-            <Item title={title_2} img={img_2} description={description_2} />
-            <Item title={title_3} img={img_3} description={description_3} />
-            <Item title={title_4} img={img_4} description={description_4} />
-        </div>
-    </section>
+<div class="my-8 xl:my-16">
+  <section class="">
+    <h2
+      class="col-span-4 poppins-bold uppercase text-3xl xl:text-6xl xl:text-center mb-6"
+    >
+      BENEFICIOS DE LA MOTORIZACIÓN HÍBRIDA AUTORRECARGABLE
+    </h2>
+
+    <div
+      class="grid grid-cols-1 xl:grid-cols-4 px-14 gap-4 lg:gap-10 relative flex items-top fondo"
+    >
+      <Item title={title_1} img={img_1} description={description_1} />
+      <Item title={title_2} img={img_2} description={description_2} />
+      <Item title={title_3} img={img_3} description={description_3} />
+      <Item title={title_4} img={img_4} description={description_4} />
+    </div>
+  </section>
 </div>
 
-
 <style lang="scss">
-    .fondo {
-      background-color: #F6F6F6;
-      clip-path: polygon(0 0, 0 84%, 3% 94%, 3% 100%, 100% 100%, 100% 22%, 96% 12%, 96% 0);
-    }
+  .fondo {
+    background-color: #f6f6f6;
+    clip-path: polygon(
+      0 0,
+      0 84%,
+      3% 94%,
+      3% 100%,
+      100% 100%,
+      100% 22%,
+      96% 12%,
+      96% 0
+    );
+  }
 </style>
